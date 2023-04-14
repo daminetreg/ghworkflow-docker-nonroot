@@ -1,0 +1,15 @@
+name: build 
+# This workflow is triggered on pushes to the repository.
+on: [push]
+
+jobs:
+  build: 
+    name: test-docker-nonroot
+    runs-on: ubuntu-latest
+    container: ghcr.io/daminetreg/github_and_tipi_compat:latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: tipi builds project 
+        run: |
+          find /
