@@ -13,4 +13,4 @@ jobs:
       - name: tipi builds project 
         run: |
           ls -la /__w/_temp/_runner_file_commands/
-          find /
+          exit 0
